@@ -1,0 +1,67 @@
+body{
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+    margin: 0;
+}
+h1{
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 6px;
+    padding: 60px 70px;
+}
+.card{
+    font-size: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+    width: 180px;
+    background-color: #222;
+    border-radius: 7px;
+    margin: 20px 5px;
+    animation: glowing 1s alternate ;
+    color: transparent;
+    cursor: pointer;
+}
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+}
+
+.card.flip {
+    background-color: black;
+    color: white;
+    animation: glowing1 1s alternate infinite;
+}
+
+@keyframes glowing{
+    0%{
+        box-shadow: 0 0 10px #00ffff11,
+                    0 0 10px #00ffff11,
+                    0 0 10px #00ffff11;
+    }
+    100%{
+        box-shadow: 0 0 10px #00ffff,
+                    0 0 10px #00ffff,
+                    0 0 10px #00ffff;
+    }
+}
+@keyframes glowing1 {
+    0%{
+        box-shadow: 0 0 10px rgba(0,255,255,0.15),
+        0 0 10px rgba(0,255,255,0.15),
+        0 0 10px rgba(0,255,255,0.15);
+    }
+    100%{
+        box-shadow: 0 0 10px #00ffff,
+        0 0 10px #00ffff,
+        0 0 10px #00ffff,;
+    }
+}
